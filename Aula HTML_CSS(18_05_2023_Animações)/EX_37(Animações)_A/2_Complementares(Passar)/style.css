@@ -1,0 +1,137 @@
+/* Geral */
+h1{
+    color: blue;
+    text-align: center;
+}
+span {
+    color: red;
+}
+
+/* Animações */
+
+/* 1ª De/Para */
+@keyframes animacao {
+    from {background-color: red;}
+    to {background-color: yellow;}
+
+}
+
+/* 2ª Porcentagem */
+@keyframes animacao2 {
+    0% {}
+    30% {width: 100px;}
+    60% {background-color: red;}
+    80% {left: 100px; background-color: blue;}
+    100% {height: 100px;}
+}
+
+/* 3ª Delay e iteration*/
+@keyframes animacao3 {
+    from {left: 0;}
+    to {Left:200px; background-color: green;}
+}
+
+/* 4ª Timing functions */
+@keyframes animacao4 {
+    from {left: 0;}
+    to {Left:500px;}
+}
+
+/* 5ª Shorthand */
+@keyframes animacao5 {
+    0% {left: 0px;}
+    25% {left: 20px; background-color: blue;}
+    60% {left: 100px; background-color: orange;}
+    100% {left: 50px; background-color: red;}
+}
+
+
+/* ________________________________________________________ */
+/* 1ª De/Para */
+.animation-div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: animacao;
+    animation-duration: 5s ;
+}
+
+/* 2ª Porcentagem */
+.animation-div2 {
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    animation-name: animacao2;
+    animation-duration: 6s ;
+    position: relative;
+}
+
+/* 3ª Delay e iteration*/
+.animation-div3 {
+    width: 100px;
+    height: 100px;
+    background-color: purple;
+    animation-name: animacao3;
+    animation-duration: 3s ;
+    animation-delay: 1s;
+    /* animation-iteration-count: 3;  Nº de ciclos a executar */
+    animation-iteration-count: infinite; /* Executar sempre */
+    position: relative;
+}
+
+/* 4ª Timing function */
+
+.box {
+    background-color: orange;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    animation-name: animacao4;
+    animation-duration: 4s ;
+    animation-iteration-count: infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+#animation-div4 {
+    /* Vai de forma linear */
+    animation-timing-function: linear;
+
+}
+#animation-div5 {
+    /* Começa rápido e termina devagar */
+    animation-timing-function: ease;
+
+}
+#animation-div6 {
+    /* Começa devagar e termina rápido */
+    animation-timing-function: ease-in;
+
+}
+#animation-div7 {
+    /* Começa rápido e desacelera */
+    animation-timing-function: ease-out;
+
+}
+#animation-div8 {
+    /* Começa devagar, no meio acelera, termina devagar */
+    animation-timing-function: ease-in-out;
+
+}
+
+/* _______________________________________________ */
+/* 5ª Shorthand */
+
+.animation-div9 {
+    background-color: darkblue;
+    width: 50px;
+    height: 50px;
+    position: relative;
+
+    /* Shorthand */
+    /* Nome animação, duração, time-function, delay e iteration */
+    animation: animacao5 6s ease-out 2s infinite;
+
+}
