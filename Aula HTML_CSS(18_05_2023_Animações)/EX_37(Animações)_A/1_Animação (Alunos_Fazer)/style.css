@@ -23,8 +23,8 @@ h1, h2, p{
     /* from {backgroung-color: lightblue;}
     to{background-color: lightgreen} */
     0% {background-color: lightblue;}
-    50% {background-color: lightcoral;}
-    100% {background-color: lightgreen;}
+    50% {background-color: lightskyblue;}
+    100% {background-color: lightsteelblue;}
 
 }
 body{
@@ -50,57 +50,75 @@ body{
     /* Etapa 1: Regra de animação (aparecer) */
     /* Faz aparecer o 2º rexto com atraso */
 
-    @keyframes aparecer{
-        from {opacity: 0;}
-        to{opacity: 1;}   
-    }
+@keyframes aparecer{
+    from {opacity: 0;}
+    to{opacity: 1;}   
+}
 
-    #dois {
-        animation-name: aparecer;
-        animation-duration: 5s;
-        animation-delay: 1s;
-        animation-fill-mode: backwards ;
-    }
+#dois {
+    animation-name: aparecer;
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-fill-mode: backwards ;
+}
 
-    /*______________________________________________ */
-    /* 3º Girar imagem */
-    #tres {
-        border: solid 3px;
-        padding: 5px;
-        width: 750px;
-        margin: auto;
-    }
+/*______________________________________________ */
+/* 3º Girar imagem */
+#tres {
+    border: solid 3px;
+    padding: 5px;
+    width: 750px;
+    margin: auto;
+}
 
-    img {
-        width: 150px;
-        height: 150px;
-    }
+img {
+    width: 150px;
+    height: 150px;
+}
 
-    /* Etapa 1: Regra de animação (animaImagem) */
-    /* Girar imagem */
+/* Etapa 1: Regra de animação (animaImagem) */
+/* Girar imagem */
 
-    @keyframes animaImagem {
-        from {transform: translateX(0) rotateZ(0);
-        opacity: 0;}
+@keyframes animaImagem {
+    from {transform: translateX(0) rotateZ(0);
+    opacity: 0;}
 
-        to { transform: translateX(570px) rotateZ(360deg);
-        opacity: 1;}
+    to { transform: translateX(570px) rotateZ(360deg);
+    opacity: 1;}
 
-    }
+}
 
-    #tres img{
-        animation-name: animaImagem;
-        animation-duration: 2s;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
-        animation-direction: alternate;
-    }
+#tres img{
+    animation-name: animaImagem;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
 
-    /*______________________________________________ */
-    /* 4ªanimação deslizar imagem */
-    /*______________________________________________ */
+/*______________________________________________ */
+/* 4ªanimação deslizar imagem */
+/*______________________________________________ */
 
-    #quatro{
-        
-    }
+#quatro{
+    border: solid 3px;
+    padding: 5px;
+    width: 750px;
+    margin: auto;
+    margin-top: 10px;
+}
+/* Etapa 1: Regra de animação (animaImagem2) */
+/* deslizar imagem */
+@keyframes animaImagem2 {
+    form {transform: translateX(0);}
+    to{transform: translateX(580px);}
+}
+
+#quatro img{
+    animation-name: animaImagem2;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
 
