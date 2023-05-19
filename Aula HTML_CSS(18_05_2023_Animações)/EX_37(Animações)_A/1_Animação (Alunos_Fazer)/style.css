@@ -1,0 +1,106 @@
+*, *::after, *::before {box-sizing: border-box;}
+
+.conteudo {
+    background-color: white;
+    padding: 5px;
+    margin-bottom: 3px;
+    border-radius: 5px;
+}
+
+h1, h2, p{
+    text-align: center;
+}
+
+/*______________________________________________ */
+/* 1º Troca a cor de fundo da tela continuamente */
+/*______________________________________________ */
+
+/* Etapa 1: regra de animação(animaFundo) */
+/* Troca a cor de fundo de tela */
+
+@keyframes animaFundo{
+    /* Sintaxe from/to: somente para 2 estados */
+    /* from {backgroung-color: lightblue;}
+    to{background-color: lightgreen} */
+    0% {background-color: lightblue;}
+    50% {background-color: lightcoral;}
+    100% {background-color: lightgreen;}
+
+}
+body{
+    font-family: 'Segoe UI';
+    /* Etapa 2: Executar/chamar a animação (animaFundo) */
+
+    /* animation-name: animaFundo; Chamada da animação */
+    /* animation-duration: 5s; Duração */
+    /*animation-iteration-count: 3; número de repetições*/
+    /*animation-iteration-count: infinite; número de repetições*/
+    /* animation-interation: alternate; Torna mais suave a transição*/
+    /*animation-direction: alternate-reverse; Torna mais suave a transição/*
+
+    /* Etapa 2: Executar/chamar a animação (animaFundo) */
+
+    /* Versão abreviada das linhas acima */
+    animation: animaFundo 3s infinite alternate-reverse;
+}
+    /*______________________________________________ */
+    /* Faz aparecer o 2º texto com atraso */
+    /*______________________________________________ */
+
+    /* Etapa 1: Regra de animação (aparecer) */
+    /* Faz aparecer o 2º rexto com atraso */
+
+    @keyframes aparecer{
+        from {opacity: 0;}
+        to{opacity: 1;}   
+    }
+
+    #dois {
+        animation-name: aparecer;
+        animation-duration: 5s;
+        animation-delay: 1s;
+        animation-fill-mode: backwards ;
+    }
+
+    /*______________________________________________ */
+    /* 3º Girar imagem */
+    #tres {
+        border: solid 3px;
+        padding: 5px;
+        width: 750px;
+        margin: auto;
+    }
+
+    img {
+        width: 150px;
+        height: 150px;
+    }
+
+    /* Etapa 1: Regra de animação (animaImagem) */
+    /* Girar imagem */
+
+    @keyframes animaImagem {
+        from {transform: translateX(0) rotateZ(0);
+        opacity: 0;}
+
+        to { transform: translateX(570px) rotateZ(360deg);
+        opacity: 1;}
+
+    }
+
+    #tres img{
+        animation-name: animaImagem;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-direction: alternate;
+    }
+
+    /*______________________________________________ */
+    /* 4ªanimação deslizar imagem */
+    /*______________________________________________ */
+
+    #quatro{
+        
+    }
+
